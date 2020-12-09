@@ -37,6 +37,26 @@
 （4）定义返回字符串方法readTxt接收参数为String类型的filePath，这个参数是在see3类中接收要处理的那个文本，创建File类型的file变量接收参数为filePath，用if来判定文件是文件时就返回返回true，只要存在就返回true方法为isFile，还有一个方法来判定不管他是不是文件只要存在就返回true，方法为exists。用InputStreamReader来接收要处理的文本。
 （5）定义String类型的List，用数组lineTxt来接收从文本中读取的每行，用while来循环当读取的为null时跳出循环，这一就是实现了将文本中的东西存到了字符串中。
 
+核心代码：
+int biaodian = ziShu/7;
+char [] zuoye = new char[ziShu+biaodian];
+int zi = 1,cha = 0,z = 0;
+char douhao = '，';
+char juhao = '。';
+for(i=0;i<ziShu;i++){
+    System.out.print(zuoYe[i]);
+    if( zi % 7 == 0 && zi % 14 != 0 && zi <= ziShu ){
+        System.out.print(",");
+        zuoye[z+cha] = douhao;
+        cha++;
+    }else if(zi % 14 == 0 && zi <= ziShu){
+        System.out.println("。");
+        zuoye[z+cha] = juhao;
+        cha++;
+    }else if( zi > ziShu){
+        break;
+    }
+
 实验结果：
 请输入学生姓名:依木拉
 请输入学生学号:2019311574
